@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Running Shoes",
+    "price": 99,
+    "category": "clothing",
+    "brand": "Cacyroy",
+    "image": "https://images.pexels.com/photos/1456733/pexels-photo-1456733.jpeg",
+    "description": "Lightweight running shoes built for comfort and performance on every run. Breathable mesh upper with responsive cushioning.",
+    "rating": 4
+  },
+  {
+    "id": 2,
+    "title": "Wireless Headphones",
+    "price": 99,
+    "category": "electronics",
+    "brand": "Cacyroy",
+    "image": "https://images.pexels.com/photos/7772548/pexels-photo-7772548.jpeg",
+    "description": "Over-ear wireless headphones with active noise cancellation and 30-hour battery life.",
+    "rating": 5
+  },
+  {
+    "id": 3,
+    "title": "Backpack",
+    "price": 129,
+    "category": "clothing",
+    "brand": "Cacyroy",
+    "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/078546/01/fnd/IND/fmt/png/PUMA-Storm-Water-Resistant-Backpack-27L",
+    "description": "Durable everyday backpack with padded laptop sleeve and water-resistant fabric.",
+    "rating": 4
+  },
+  {
+    "id": 4,
+    "title": "Smartwatch",
+    "price": 249,
+    "category": "electronics",
+    "brand": "Cacyroy",
+    "image": "https://images.pexels.com/photos/11700618/pexels-photo-11700618.jpeg",
+    "description": "Track workouts, heart rate, and notifications on a bright always-on display.",
+    "rating": 4
+  },
+  {
+    "id": 5,
+    "title": "Sunglasses",
+    "price": 149,
+    "category": "clothing",
+    "brand": "Cacyroy",
+    "image": "https://images.pexels.com/photos/8360292/pexels-photo-8360292.jpeg",
+    "description": "Polarized UV-protection sunglasses with a lightweight matte frame.",
+    "rating": 3
+  },
+  {
+    "id": 6,
+    "title": "Digital Camera",
+    "price": 499,
+    "category": "electronics",
+    "brand": "Cacyroy",
+    "image": "https://media.istockphoto.com/id/185278433/photo/black-digital-slr-camera-in-a-white-background.jpg?s=1024x1024&w=is&k=20&c=UjIzN8-KrVm1urSdQdwmfsy2Iiln2Si6AZozCx5F6dM=",
+    "description": "Mirrorless digital camera with 24MP sensor and 4K video recording.",
+    "rating": 5
+  },
+  {
+    "id": 7,
+    "title": "T-shirt",
+    "price": 29,
+    "category": "clothing",
+    "brand": "Cacyroy",
+    "image": "https://images.pexels.com/photos/18257675/pexels-photo-18257675.jpeg",
+    "description": "Soft cotton crew-neck t-shirt, pre-shrunk and available in classic fit.",
+    "rating": 4
+  },
+  {
+    "id": 8,
+    "title": "Smartphone",
+    "price": 699,
+    "category": "electronics",
+    "brand": "Cacyroy",
+    "image": "https://images.pexels.com/photos/32665239/pexels-photo-32665239.jpeg",
+    "description": "Lorem ipsum dolor amet, conssectetur euisagend.",
+    "rating": 4
+  },
+  {
+    "id": 9,
+    "title": "Table Lamp",
+    "price": 39,
+    "category": "home",
+    "brand": "Cacyroy",
+    "image": "https://images.pexels.com/photos/20402619/pexels-photo-20402619.jpeg",
+    "description": "Minimalist table lamp with warm dimmable LED light, perfect for a bedside or desk.",
+    "rating": 4
+  }
+]

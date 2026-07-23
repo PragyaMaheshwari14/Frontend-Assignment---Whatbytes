@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f5f5;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+
+  /* Monochrome brand scale — replaces the blue accent from the reference
+     design with near-black/charcoal tones so the whole UI stays grayscale. */
+  --color-brand-950: #0a0a0a;
+  --color-brand-900: #171717;
+  --color-brand-800: #262626;
+  --color-brand-700: #404040;
+  --color-brand-600: #525252;
+  --color-brand-500: #737373;
+  --color-brand-400: #a3a3a3;
+  --color-brand-300: #d4d4d4;
+  --color-brand-200: #e5e5e5;
+  --color-brand-100: #f5f5f5;
+  --color-brand-50: #fafafa;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Custom range slider thumb — kept monochrome (black) instead of the
+   browser-default accent color */
+input[type="range"] {
+  accent-color: var(--color-brand-900);
+}
