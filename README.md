@@ -51,6 +51,6 @@ types/               Shared TypeScript types
 - [x] Part 5 — Filtering & search logic
 - [x] Part 6 — URL-based filters
 - [x] Part 7 — Cart state management (Context + localStorage)
-- [ ] Part 8 — Product detail page
+- [x] Part 8 — Product detail page
 - [ ] Part 9 — Cart page
 - [ ] Part 10 — Polish & Vercel deployment
