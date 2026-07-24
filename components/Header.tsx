@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { Search, ShoppingCart, User } from "lucide-react";
+import { useCart } from "@/context/CartContext";
 
 export default function Header() {
   const router = useRouter();
@@ -11,7 +12,7 @@ export default function Header() {
     searchParams.get("search") ?? ""
   );
 
-  const cartCount = 0;
+  const { cartCount, isHydrated } = useCart();
 
   function handleSearchSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -21,7 +22,7 @@ export default function Header() {
     } else {
       params.delete("search");
     }
-    router.push(`?${params.toString()}`);
+    router.push(`/?${params.toString()}`);
   }
 
   return (
@@ -63,7 +64,7 @@ export default function Header() {
             aria-label="View cart"
           >
             <ShoppingCart className="h-5 w-5" />
-            {cartCount > 0 && (
+            {isHydrated && cartCount > 0 && (
               <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-white px-1 text-xs font-semibold text-brand-950">
                 {cartCount}
               </span>

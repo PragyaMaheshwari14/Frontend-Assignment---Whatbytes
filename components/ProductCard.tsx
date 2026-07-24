@@ -5,15 +5,21 @@ import Link from "next/link";
 import { Star } from "lucide-react";
 import { Product } from "@/types";
 import { formatPrice } from "@/lib/utils";
+import { useState } from "react";
+import { useCart } from "@/context/CartContext";
 
 interface ProductCardProps {
   product: Product;
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
+  const { addToCart } = useCart();
+  const [justAdded, setJustAdded] = useState(false);
+  
   function handleAddToCart() {
-    // Real cart logic (Context + localStorage) arrives in Part 7.
-    console.log("add to cart:", product.id);
+    addToCart(product, 1);
+    setJustAdded(true);
+    setTimeout(() => setJustAdded(false), 1200);
   }
 
   return (
@@ -60,9 +66,13 @@ export default function ProductCard({ product }: ProductCardProps) {
         <button
           type="button"
           onClick={handleAddToCart}
-          className="mt-auto w-full rounded-lg bg-brand-900 py-2 pt-2 text-sm font-medium text-white transition hover:bg-brand-800 active:bg-brand-950"
+          className={`mt-auto w-full rounded-lg  py-2 text-sm font-medium text-white transition ${
+               justAdded
+               ? "bg-brand-700"
+              : "bg-brand-900 hover:bg-brand-800 active:bg-brand-950"
+            }` }
         >
-          Add to Cart
+         {justAdded ? "Added ✓" : "Add to Cart"}
         </button>
       </div>
     </div>
