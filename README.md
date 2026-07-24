@@ -48,7 +48,7 @@ types/               Shared TypeScript types
 - [x] Part 2 — Header & Footer
 - [x] Part 3 — Product grid & product card
 - [x] Part 4 — Sidebar filters UI
-- [ ] Part 5 — Filtering & search logic
+- [x] Part 5 — Filtering & search logic
 - [ ] Part 6 — URL-based filters
 - [ ] Part 7 — Cart state management (Context + localStorage)
 - [ ] Part 8 — Product detail page
