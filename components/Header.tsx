@@ -1,16 +1,27 @@
 "use client";
 import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { Search, ShoppingCart, User } from "lucide-react";
 
 export default function Header() {
-  const [searchValue, setSearchValue] = useState("");
+  const router = useRouter();
+   const searchParams = useSearchParams();
+  const [searchValue, setSearchValue] = useState(
+    searchParams.get("search") ?? ""
+  );
 
   const cartCount = 0;
 
   function handleSearchSubmit(e: React.FormEvent) {
     e.preventDefault();
-    console.log("search submitted:", searchValue);
+    const params = new URLSearchParams(searchParams.toString());
+    if (searchValue.trim()) {
+      params.set("search", searchValue.trim());
+    } else {
+      params.delete("search");
+    }
+    router.push(`?${params.toString()}`);
   }
 
   return (

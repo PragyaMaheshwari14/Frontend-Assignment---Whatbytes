@@ -4,7 +4,9 @@ import ProductGrid from "@/components/ProductGrid";
 import Slidebar from "@/components/Slidebar";
 import productsData from "@/data/products.json";
 import { Product } from "@/types";
-import { useState } from "react";
+import { filterProducts } from "@/lib/filterProducts";
+import { Suspense, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 const products = productsData as Product[];
 const PRICE_LIMIT = 1000;
@@ -12,19 +14,34 @@ const PRICE_LIMIT = 1000;
 const categories = Array.from(new Set(products.map((p) => p.category)));
 const brands = Array.from(new Set(products.map((p) => p.brand)));
 
-export default function Home() {
+function ProductListing() {
+  const searchParams = useSearchParams();
+  const search = searchParams.get("search") ?? "";
+
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [priceRange, setPriceRange] = useState<[number, number]>([
     0,
     PRICE_LIMIT,
   ]);
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
+
   function handleBrandToggle(brand: string) {
     setSelectedBrands((prev) =>
       prev.includes(brand) ? prev.filter((b) => b !== brand) : [...prev, brand],
     );
   }
 
+  const filteredProducts = useMemo(
+    () =>
+      filterProducts(products, {
+        category: selectedCategory,
+        minPrice: priceRange[0],
+        maxPrice: priceRange[1],
+        search,
+        brand: selectedBrands,
+      }),
+    [selectedCategory, priceRange, search, selectedBrands],
+  );
   return (
     <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-8 sm:px-6 lg:px-8">
       <h1 className="mb-6 text-2xl font-bold text-brand-500">
@@ -46,9 +63,17 @@ export default function Home() {
         />
 
         <div className="flex-1">
-          <ProductGrid products={products} />
+          <ProductGrid products={filteredProducts} />
         </div>
       </div>
     </main>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={null}>
+      <ProductListing />
+    </Suspense>
   );
 }

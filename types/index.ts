@@ -15,6 +15,7 @@ export interface CartItem {
 }
 
 export interface Filters {
+  brand: any;
   category: string;
   minPrice: number;
   maxPrice: number;
