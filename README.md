@@ -45,7 +45,7 @@ types/               Shared TypeScript types
 ## Progress
 
 - [x] Part 1 — Project setup (Next.js, Tailwind, folder structure, mock data)
-- [ ] Part 2 — Header & Footer
+- [x] Part 2 — Header & Footer
 - [ ] Part 3 — Product grid & product card
 - [ ] Part 4 — Sidebar filters UI
 - [ ] Part 5 — Filtering & search logic
