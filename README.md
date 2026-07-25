@@ -2,7 +2,7 @@
 
 A responsive e-commerce product listing, product detail, and cart app built with **Next.js (App Router)**, **TypeScript**, and **Tailwind CSS**, styled in a **monochrome** theme.
 
-**Live URL:** _(added after Vercel deployment)_
+**Live URL:** https://frontend-assignment-whatbytes-lake.vercel.app/
 
 ## Tech Stack
 
