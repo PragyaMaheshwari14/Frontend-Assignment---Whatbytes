@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5f5f5;
+  --background: #f1f5f9;
   --foreground: #171717;
 }
 
@@ -24,7 +24,22 @@
   --color-brand-200: #e5e5e5;
   --color-brand-100: #f5f5f5;
   --color-brand-50: #fafafa;
+
+
+  --color-accent-900: #16324f;
+  --color-accent-800: #1c3f63;
+  --color-accent-700: #204a75;
+  --color-accent-600: #1d4ed8;
+  --color-accent-500: #2563eb;
+  --color-accent-400: #60a5fa;
+  --color-accent-300: #93c5fd;
+  --color-accent-200: #bfdbfe;
+  --color-accent-100: #dbeafe;
+
 }
+
+
+
 
 body {
   background: var(--background);
@@ -35,5 +50,5 @@ body {
 /* Custom range slider thumb — kept monochrome (black) instead of the
    browser-default accent color */
 input[type="range"] {
-  accent-color: var(--color-brand-900);
+  accent-color: var(--color-accent-600);
 }

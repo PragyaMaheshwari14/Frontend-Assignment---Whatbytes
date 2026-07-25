@@ -2,17 +2,17 @@
   {
     "id": 1,
     "title": "Running Shoes",
-    "price": 99,
+    "price": 789,
     "category": "clothing",
-    "brand": "Cacyroy",
-    "image": "https://images.pexels.com/photos/1456733/pexels-photo-1456733.jpeg",
+    "brand": "Puma",
+    "image": "https://images.pexels.com/photos/29342144/pexels-photo-29342144.jpeg",
     "description": "Lightweight running shoes built for comfort and performance on every run. Breathable mesh upper with responsive cushioning.",
     "rating": 4
   },
   {
     "id": 2,
     "title": "Wireless Headphones",
-    "price": 99,
+    "price": 689,
     "category": "electronics",
     "brand": "Cacyroy",
     "image": "https://images.pexels.com/photos/7772548/pexels-photo-7772548.jpeg",
@@ -22,9 +22,9 @@
   {
     "id": 3,
     "title": "Backpack",
-    "price": 129,
+    "price": 899,
     "category": "clothing",
-    "brand": "Cacyroy",
+    "brand": "Puma",
     "image": "https://images.pexels.com/photos/3731256/pexels-photo-3731256.jpeg",
     "description": "Durable everyday backpack with padded laptop sleeve and water-resistant fabric.",
     "rating": 4
@@ -32,7 +32,7 @@
   {
     "id": 4,
     "title": "Smartwatch",
-    "price": 249,
+    "price": 799,
     "category": "electronics",
     "brand": "Cacyroy",
     "image": "https://images.pexels.com/photos/11700618/pexels-photo-11700618.jpeg",
@@ -42,7 +42,7 @@
   {
     "id": 5,
     "title": "Sunglasses",
-    "price": 149,
+    "price": 449,
     "category": "clothing",
     "brand": "Cacyroy",
     "image": "https://images.pexels.com/photos/8360292/pexels-photo-8360292.jpeg",
@@ -52,7 +52,7 @@
   {
     "id": 6,
     "title": "Digital Camera",
-    "price": 499,
+    "price": 699,
     "category": "electronics",
     "brand": "Cacyroy",
     "image": "https://media.istockphoto.com/id/185278433/photo/black-digital-slr-camera-in-a-white-background.jpg?s=1024x1024&w=is&k=20&c=UjIzN8-KrVm1urSdQdwmfsy2Iiln2Si6AZozCx5F6dM=",
@@ -62,7 +62,7 @@
   {
     "id": 7,
     "title": "T-shirt",
-    "price": 29,
+    "price": 789,
     "category": "clothing",
     "brand": "Cacyroy",
     "image": "https://images.pexels.com/photos/18257675/pexels-photo-18257675.jpeg",
@@ -82,7 +82,7 @@
   {
     "id": 9,
     "title": "Table Lamp",
-    "price": 39,
+    "price": 300,
     "category": "home",
     "brand": "Cacyroy",
     "image": "https://images.pexels.com/photos/20402619/pexels-photo-20402619.jpeg",

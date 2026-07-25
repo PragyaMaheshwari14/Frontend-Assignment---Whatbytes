@@ -58,7 +58,7 @@ export default function ProductCard({ product }: ProductCardProps) {
               className="h-3.5 w-3.5"
               fill={i < product.rating ? "currentColor" : "none"}
               strokeWidth={1.5}
-              color="var(--color-brand-900)"
+              color="var(--color-accent-600)"
             />
           ))}
         </div>
@@ -68,8 +68,8 @@ export default function ProductCard({ product }: ProductCardProps) {
           onClick={handleAddToCart}
           className={`mt-auto w-full rounded-lg  py-2 text-sm font-medium text-white transition ${
                justAdded
-               ? "bg-brand-700"
-              : "bg-brand-900 hover:bg-brand-800 active:bg-brand-950"
+               ? "bg-accent-800"
+              : "bg-accent-700 hover:bg-accent-600 active:bg-accent-800"
             }` }
         >
          {justAdded ? "Added ✓" : "Add to Cart"}

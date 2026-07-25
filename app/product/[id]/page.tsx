@@ -37,7 +37,7 @@ export default function ProductDetailPage() {
         </p>
         <Link
           href="/"
-          className="rounded-lg bg-brand-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-brand-800"
+          className="rounded-lg bg-accent-700 px-4 py-2 text-sm font-medium text-white transition hover:bg-accent-600"
         >
           Back to shop
         </Link>
@@ -97,7 +97,7 @@ export default function ProductDetailPage() {
                 className="h-4 w-4"
                 fill={i < product.rating ? "currentColor" : "none"}
                 strokeWidth={1.5}
-                color="var(--color-brand-900)"
+                color="var(--color-accent-600)"
               />
             ))}
           </div>
@@ -151,8 +151,8 @@ export default function ProductDetailPage() {
             onClick={handleAddToCart}
             className={`mt-2 w-full rounded-lg py-3 text-sm font-semibold text-white transition sm:w-auto sm:px-10 ${
               justAdded
-                ? "bg-brand-700"
-                : "bg-brand-900 hover:bg-brand-800 active:bg-brand-950"
+                ? "bg-accent-800"
+                : "bg-accent-700 hover:bg-accent-600 active:bg-accent-800"
             }`}
           >
             {justAdded ? "Added ✓" : "Add to Cart"}

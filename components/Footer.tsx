@@ -30,16 +30,16 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-auto bg-brand-950 text-white">
+    <footer className="mt-auto bg-accent-900 text-white">
       <div className="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
         <div>
           <p className="text-lg font-bold">Cacyroy</p>
-          <p className="mt-1 text-sm text-brand-400">
+          <p className="mt-1 text-sm text-accent-200">
             &copy; {year} Cacyroy. All rights reserved.
           </p>
         </div>
 
-        <nav className="flex gap-6 text-sm text-brand-300">
+        <nav className="flex gap-6 text-sm text-accent-100">
           <Link href="/" className="transition hover:text-white">
             Home
           </Link>
@@ -54,7 +54,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-brand-700 transition hover:bg-brand-800"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-accent-700 transition hover:bg-brand-800"
           >
             <FacebookIcon className="h-4 w-4" />
           </a>
@@ -63,7 +63,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitter"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-brand-700 transition hover:bg-brand-800"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-accent-700 transition hover:bg-brand-800"
           >
             <TwitterIcon className="h-4 w-4" />
           </a>
@@ -72,7 +72,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-brand-700 transition hover:bg-brand-800"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-accent-700 transition hover:bg-brand-800"
           >
             <InstagramIcon className="h-4 w-4" />
           </a>

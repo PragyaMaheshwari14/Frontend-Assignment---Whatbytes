@@ -26,7 +26,7 @@ export default function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-40 bg-brand-950 text-white">
+    <header className="sticky top-0 z-40 bg-accent-700 text-white">
       <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link
@@ -39,7 +39,7 @@ export default function Header() {
         {/* Search bar */}
         <form
           onSubmit={handleSearchSubmit}
-          className="mx-auto hidden w-full max-w-md flex-1 sm:block"
+          className="mx-auto hidden w-full max-w-md flex-1 sm:block "
         >
           <div className="relative">
             <Search
@@ -51,7 +51,7 @@ export default function Header() {
               value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
               placeholder="Search for products..."
-              className="w-full rounded-full border border-brand-700 bg-brand-900 py-2 pl-10 pr-4 text-sm text-white placeholder-brand-400 outline-none transition focus:border-brand-400"
+              className="w-full rounded-full border border-transparent bg-white py-2 pl-10 pr-4 text-sm text-brand-900 placeholder-brand-400 outline-none transition focus:border-accent-300"
             />
           </div>
         </form>
@@ -60,12 +60,12 @@ export default function Header() {
         <div className="ml-auto flex items-center gap-3 sm:ml-0">
           <Link
             href="/cart"
-            className="relative flex h-10 w-10 items-center justify-center rounded-full transition hover:bg-brand-800"
+            className="relative flex items-center gap-2 rounded-lg bg-accent-900 px-4 py-2 text-sm font-medium transition hover:bg-accent-800"
             aria-label="View cart"
           >
-            <ShoppingCart className="h-5 w-5" />
+            <ShoppingCart className="h-4 w-4" />
             {isHydrated && cartCount > 0 && (
-              <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-white px-1 text-xs font-semibold text-brand-950">
+              <span className="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-white px-1 text-xs font-semibold text-accent-800">
                 {cartCount}
               </span>
             )}
@@ -73,7 +73,7 @@ export default function Header() {
 
           <button
             type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-brand-700 transition hover:bg-brand-800"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-accent-700 transition hover:bg-accent-800"
             aria-label="Profile"
           >
             <User className="h-5 w-5" />

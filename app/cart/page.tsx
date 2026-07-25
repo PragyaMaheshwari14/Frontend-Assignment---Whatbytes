@@ -29,7 +29,7 @@ export default function CartPage() {
         </p>
         <Link
           href="/"
-          className="mt-2 rounded-lg bg-brand-900 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-brand-800"
+          className="mt-2 rounded-lg bg-accent-700 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-accent-600"
         >
           Continue shopping
         </Link>
@@ -39,7 +39,7 @@ export default function CartPage() {
 
   return (
     <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8 sm:px-6 lg:px-8">
-      <h1 className="mb-6 text-2xl font-bold text-brand-950">Your Cart</h1>
+      <h1 className="mb-6 text-2xl font-bold text-accent-900">Your Cart</h1>
 
       <div className="flex flex-col gap-8 lg:flex-row">
         {/* Item list */}
@@ -135,7 +135,7 @@ export default function CartPage() {
           </div>
           <button
             type="button"
-            className="mt-5 w-full rounded-lg bg-brand-900 py-3 text-sm font-semibold text-white transition hover:bg-brand-800"
+            className="mt-5 w-full rounded-lg bg-accent-700 py-3 text-sm font-semibold text-white transition hover:bg-accent-600"
           >
             Checkout
           </button>

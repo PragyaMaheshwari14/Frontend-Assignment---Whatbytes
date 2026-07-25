@@ -5,7 +5,7 @@ import Sidebar from "@/components/Sidebar";
 import productsData from "@/data/products.json";
 import { Product } from "@/types";
 import { filterProducts } from "@/lib/filterProducts";
-import { Suspense, useMemo} from "react";
+import { Suspense, useMemo } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 const products = productsData as Product[];
@@ -23,20 +23,18 @@ function parsePriceParam(value: string | null): [number, number] {
   return [min, max];
 }
 
-
 function ProductListing() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const search = searchParams.get("search") ?? "";
   const selectedCategory = searchParams.get("category") ?? "all";
   const [minPrice, maxPrice] = parsePriceParam(searchParams.get("price"));
-  const selectedBrands = useMemo(()=> {
-   const raw = searchParams.get("brand");
+  const selectedBrands = useMemo(() => {
+    const raw = searchParams.get("brand");
     return raw ? raw.split(",").filter(Boolean) : [];
   }, [searchParams]);
 
-
- function updateParams(updates: Record<string, string | null>) {
+  function updateParams(updates: Record<string, string | null>) {
     const params = new URLSearchParams(searchParams.toString());
     for (const [key, value] of Object.entries(updates)) {
       if (value === null || value === "") {
@@ -48,7 +46,7 @@ function ProductListing() {
     router.replace(`/?${params.toString()}`, { scroll: false });
   }
 
-   function handleCategoryChange(category: string) {
+  function handleCategoryChange(category: string) {
     updateParams({ category: category === "all" ? null : category });
   }
 
@@ -56,13 +54,12 @@ function ProductListing() {
     const isDefaultRange = min === 0 && max === PRICE_LIMIT;
     updateParams({ price: isDefaultRange ? null : `${min}-${max}` });
   }
-   function handleBrandToggle(brand: string) {
+  function handleBrandToggle(brand: string) {
     const next = selectedBrands.includes(brand)
       ? selectedBrands.filter((b) => b !== brand)
       : [...selectedBrands, brand];
     updateParams({ brand: next.length > 0 ? next.join(",") : null });
   }
-
 
   const filteredProducts = useMemo(
     () =>
@@ -77,10 +74,6 @@ function ProductListing() {
   );
   return (
     <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-8 sm:px-6 lg:px-8">
-      <h1 className="mb-6 text-2xl font-bold text-brand-500">
-        Product Listing
-      </h1>
-
       <div className="flex flex-col gap-6 lg:flex-row">
         <Sidebar
           categories={categories}
@@ -96,6 +89,9 @@ function ProductListing() {
         />
 
         <div className="flex-1">
+          <h1 className="mb-6 text-2xl font-bold text-brand-950">
+            Product Listing
+          </h1>
           <ProductGrid products={filteredProducts} />
         </div>
       </div>
