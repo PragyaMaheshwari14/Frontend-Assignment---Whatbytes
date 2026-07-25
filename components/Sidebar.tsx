@@ -30,7 +30,7 @@ export default function Sidebar({
   onBrandToggle,
 }: SidebarProps) {
   return (
-    <aside className="w-full shrink-0 space-y-4 lg:w-64">
+    <aside className="w-full shrink-0 space-y-4 lg:w-56">
       {/* Single dark navy filter card, matching the reference design */}
       <div className="rounded-xl bg-accent-900 p-5 text-white">
         <h2 className="mb-4 text-lg font-bold">Filters</h2>

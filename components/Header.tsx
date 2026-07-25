@@ -39,7 +39,7 @@ export default function Header() {
         {/* Search bar */}
         <form
           onSubmit={handleSearchSubmit}
-          className="mx-auto hidden w-full max-w-md flex-1 sm:block "
+          className="mx-auto hidden w-full max-w-xs flex-1 sm:block "
         >
           <div className="relative">
             <Search
@@ -69,6 +69,7 @@ export default function Header() {
                 {cartCount}
               </span>
             )}
+            <h2> Cart</h2>
           </Link>
 
           <button

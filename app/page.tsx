@@ -89,7 +89,7 @@ function ProductListing() {
         />
 
         <div className="flex-1">
-          <h1 className="mb-6 text-2xl font-bold text-brand-950">
+          <h1 className="mb-6 text-3xl font-bold text-accent-900 ">
             Product Listing
           </h1>
           <ProductGrid products={filteredProducts} />
