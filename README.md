@@ -53,4 +53,4 @@ types/               Shared TypeScript types
 - [x] Part 7 — Cart state management (Context + localStorage)
 - [x] Part 8 — Product detail page
 - [x] Part 9 — Cart page
-- [ ] Part 10 — Polish & Vercel deployment
+- [x] Part 10 — Polish & Vercel deployment
